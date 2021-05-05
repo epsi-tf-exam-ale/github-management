@@ -32,8 +32,8 @@ jobs:
         id: init
         run: terraform init
         env:
-           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-           GITHUB_ORG : ${{ secrets.GITHUB_ORG  }}
+           TF_VAR_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+           TF_VAR_GITHUB_ORG : ${{ secrets.GITHUB_ORG  }}
 
       - name: Terraform fmt
         id: fmt
@@ -47,8 +47,8 @@ jobs:
         id: plan
         run: terraform plan
         env:
-           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-           GITHUB_ORG : ${{ secrets.GITHUB_ORG  }}
+           TF_VAR_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+           TF_VAR_GITHUB_ORG : ${{ secrets.GITHUB_ORG  }}
            
            
       - name: Update Pull Request
