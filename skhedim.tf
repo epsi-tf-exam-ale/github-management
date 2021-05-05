@@ -1,4 +1,4 @@
-module "Team_Creation" {
+module "skhedim" {
   source = "./module/"
   
   repository = "skhedim_test"
