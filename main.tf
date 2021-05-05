@@ -14,7 +14,7 @@ module "Team_Creation" {
   collaborators = [
     {
         username = "skhedim", 
-        permission = "pull" // admin | push | pull
+        permission = "push" // admin | push | pull
     },
     {
         username = "Salombo", 
