@@ -12,7 +12,7 @@ terraform {
 module "Team_Creation" {
   source = "./module/"
   
-  repository = "Test_BIOUS"
+  repository = "THE_POGGEST"
   description = "Repository de test"
   visibility = "public"
   
@@ -45,7 +45,7 @@ module "Team_Creation" {
   // Teams à créer dans l'organisation
   teams_creation = [
     {
-        name = "TEAM3O34",
+        name = "Poggies",
         description = "La team 3"
         permission = "push"
         privacy = "closed" // closed | secret
