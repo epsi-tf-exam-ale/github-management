@@ -32,8 +32,8 @@ jobs:
         id: init
         run: terraform init
         env:
-           TF_VAR_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-           TF_VAR_GITHUB_ORG : ${{ secrets.GITHUB_ORG  }}
+           TF_VAR_GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
+           TF_VAR_GIT_ORG : ${{ secrets.GIT_ORG  }}
 
       - name: Terraform fmt
         id: fmt
@@ -47,8 +47,8 @@ jobs:
         id: plan
         run: terraform plan
         env:
-           TF_VAR_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-           TF_VAR_GITHUB_ORG : ${{ secrets.GITHUB_ORG  }}
+           TF_VAR_GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
+           TF_VAR_GIT_ORG : ${{ secrets.GIT_ORG  }}
            
            
       - name: Update Pull Request
@@ -56,7 +56,7 @@ jobs:
         env:
           PLAN: "terraform\n${{ steps.plan.outputs.stdout }}"
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GIT_TOKEN }}
           script: |
             const output = `#### Terraform Format and Style 🖌\`${{ steps.fmt.outcome }}\`
             #### Terraform Initialization ⚙️\`${{ steps.init.outcome }}\`
