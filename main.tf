@@ -1,7 +1,7 @@
 module "Team_Creation" {
   source = "./module/"
   
-  repository = "Test"
+  repository = "Test123"
   description = "Repository de test"
   visibility = "public"
   
@@ -34,7 +34,7 @@ module "Team_Creation" {
   // Teams à créer dans l'organisation
   teams_creation = [
     {
-        name = "TEAM3",
+        name = "TEAM3123",
         description = "La team 3"
         permission = "push"
         privacy = "closed" // closed | secret
