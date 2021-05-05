@@ -34,7 +34,7 @@ module "Team_Creation" {
   // Teams à créer dans l'organisation
   teams_creation = [
     {
-        name = "TEAM3",
+        name = "TEAM31",
         description = "La team 3"
         permission = "push"
         privacy = "closed" // closed | secret
