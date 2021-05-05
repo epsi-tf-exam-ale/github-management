@@ -45,7 +45,7 @@ jobs:
       
       - name: Terraform plan
         id: plan
-        run: terraform plan
+        run: terraform plan -no-color
         env:
            TF_VAR_GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
            TF_VAR_GIT_ORG : ${{ secrets.GIT_ORG  }}
