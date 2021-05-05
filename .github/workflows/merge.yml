@@ -35,7 +35,7 @@ jobs:
            TF_VAR_GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
            TF_VAR_GIT_ORG : ${{ secrets.GIT_ORG  }}
       
-      - name: Terraform plan
+      - name: Terraform apply
         id: plan
         run: terraform apply -auto-approve
         env:
